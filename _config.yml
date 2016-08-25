@@ -1,0 +1,52 @@
+# Basic
+title: 紫晖のBlog
+subtitle: 简单的技术积累
+welcome_message: <a href="https://github.com/zhaozihui" target="_blank">My Github</a>
+description: 
+creator: <a href="zhaozihui.github.io”>@zhaozihui</a>
+
+url: "http://vno.onevcat.com"
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: plain
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: red
+
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+    - {title: Projects, description: My Projects, url: 'https://github.com/zhaozihui'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+    weibo: zhao0285
+    github: zhaozihui
+    twitter: zhaozihui
+    gplus: 107108267983477358170
+    mail: zhaozihui@gmail.com
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
