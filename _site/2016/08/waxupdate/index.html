@@ -157,130 +157,134 @@
 
   <section class="post">
     <p>wax最新github托管地址 :
-    <a href="https://github.com/alibaba/wax">https://github.com/alibaba/wax</a>
+    https://github.com/alibaba/wax
 现在由alibaba进行代码的维护.</p>
 
-<h2>功能1 代码覆盖</h2>
-
+<h2 id="section">功能1 代码覆盖</h2>
 <p>原始OB代码</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text"> @implementation MainViewController
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-}
+<div class="highlighter-rouge"><pre class="highlight"><code> <span class="k">@implementation</span> <span class="nc">MainViewController</span>
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&quot;Cell&quot;];
-    cell.textLabel.text = [NSString stringWithFormat:@&quot;%d&quot;, indexPath.row + 1];
-    return cell;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ViewController *vc = [[ViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-@end
-</code></pre></figure>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">tableView</span><span class="p">:(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">numberOfRowsInSection</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">section</span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView</span><span class="p">:(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">cellForRowAtIndexPath</span><span class="p">:(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">UITableViewCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableViewCell</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithStyle</span><span class="p">:</span><span class="n">UITableViewCellStyleSubtitle</span> <span class="nf">reuseIdentifier</span><span class="p">:</span><span class="s">@"Cell"</span><span class="p">];</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">cell</span><span class="p">.</span><span class="n">textLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="nf">stringWithFormat</span><span class="p">:</span><span class="s">@"%d"</span><span class="p">,</span> <span class="n">indexPath</span><span class="p">.</span><span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="n">cell</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">tableView</span><span class="p">:(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">didSelectRowAtIndexPath</span><span class="p">:(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
+<span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="n">ViewController</span> <span class="o">*</span><span class="n">vc</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="err"> </span> <span class="err"> </span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nf">pushViewController</span><span class="p">:</span><span class="n">vc</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+</code></pre>
+</div>
 <p>画面效果图:</p>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1261.PNG">
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1261.PNG" />
 覆盖的lua代码
-```sh
- waxClass{&quot;MainViewController&quot;, UITableViewController}</p>
+~~~sh
+ waxClass{“MainViewController”, UITableViewController}</p>
 
 <p>function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
-    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
-    cell:textLabel():setText(&quot;&quot; .. (10 - indexPath:row()))
-    cell:detailTextLabel():setText(&quot;zhaozihui&quot;)
-    cell:textLabel():setTextColor(UIColor:redColor())
-    return cell
+	local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+	cell:textLabel():setText(“” .. (10 - indexPath:row()))
+	cell:detailTextLabel():setText(“zhaozihui”)
+	cell:textLabel():setTextColor(UIColor:redColor())
+	return cell
 end
-```
+~~~
 覆盖后画面效果图:</p>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1262.PNG">
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1262.PNG" />
 功能就是替换每个cell中的显示内容</p>
 
-<h2>功能2 控制画面逻辑</h2>
-
+<h2 id="section-1">功能2 控制画面逻辑</h2>
 <p>在功能1 的基础上覆盖OC的画面逻辑
 原始代码逻辑:</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">@implementation ViewController
-{
-    NSString *testStr;
-}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    testStr = @&quot;显示内容&quot;;
-    [self setTitle:@&quot;我是标题OC&quot;];
-    // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    UIWebView *wb = [[UIWebView alloc] init];
-    NSURLRequest *url = [NSURLRequest requestWithURL:[NSURL URLWithString:@&quot;&quot;]];
-    [wb loadRequest:url];
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">@implementation</span> <span class="nc">ViewController</span>
+<span class="p">{</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">testStr</span><span class="p">;</span>
+<span class="p">}</span>
 
-}
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidLoad</span><span class="p">];</span>
+    <span class="n">testStr</span> <span class="o">=</span> <span class="s">@"显示内容"</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">setTitle</span><span class="p">:</span><span class="s">@"我是标题OC"</span><span class="p">];</span>
+    <span class="c1">// Do any additional setup after loading the view.
+</span>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nf">setBackgroundColor</span><span class="p">:[</span><span class="n">UIColor</span> <span class="nf">whiteColor</span><span class="p">]];</span>
+    <span class="n">UIWebView</span> <span class="o">*</span><span class="n">wb</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIWebView</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+    <span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLRequest</span> <span class="nf">requestWithURL</span><span class="p">:[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@""</span><span class="p">]];</span>
+    <span class="p">[</span><span class="n">wb</span> <span class="nf">loadRequest</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+<span class="p">}</span>
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
-}
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didReceiveMemoryWarning</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">];</span>
+    <span class="c1">// Dispose of any resources that can be recreated.
+</span><span class="p">}</span>
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&quot;Cell&quot;];
-    cell.textLabel.text = testStr;
-    return cell;
-}
-</code></pre></figure>
+<span class="o">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">tableView</span><span class="o">:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span> <span class="n">numberOfRowsInSection</span><span class="o">:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">section</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span><span class="o">:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span> <span class="n">cellForRowAtIndexPath</span><span class="o">:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="n">indexPath</span> <span class="p">{</span>
+    <span class="n">UITableViewCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableViewCell</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithStyle</span><span class="p">:</span><span class="n">UITableViewCellStyleSubtitle</span> <span class="nf">reuseIdentifier</span><span class="p">:</span><span class="s">@"Cell"</span><span class="p">];</span>
+    <span class="n">cell</span><span class="p">.</span><span class="n">textLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">testStr</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">cell</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 <p>原始的画面效果:</p>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1264.PNG"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1264.PNG" /></p>
 
 <p>新的lua代码可以改变原始代码的显示和逻辑控制
 以下的代码控制原始的oc的controller 跳转到一个新的lua制作的页面</p>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">require &quot;SimpleMapController&quot;
 
-waxClass{&quot;ViewController&quot;, UITableViewController}
+<div class="highlighter-rouge"><pre class="highlight"><code>require "SimpleMapController"
 
-local string = &quot;a string&quot;
+waxClass{"ViewController", UITableViewController}
+
+local string = "a string"
 function viewDidLoad(self)
- testStr = &quot;哈哈哈我是lua的cell内容&quot;
- self:setTitle(&quot;我是标题LUA&quot;);
+ testStr = "哈哈哈我是lua的cell内容"
+ self:setTitle("我是标题LUA");
 end
 
 function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
-    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
-    cell:textLabel():setText(&quot;&quot; .. indexPath:row())
-    cell:detailTextLabel():setText(testStr)
-    cell:textLabel():setTextColor(UIColor:redColor())
-    cell:detailTextLabel():setTextColor(UIColor:greenColor())
-    return cell
+	local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+	cell:textLabel():setText("" .. indexPath:row())
+	cell:detailTextLabel():setText(testStr)
+	cell:textLabel():setTextColor(UIColor:redColor())
+	cell:detailTextLabel():setTextColor(UIColor:greenColor())
+	return cell
 end
 
 function tableView_didSelectRowAtIndexPath(self,tableView, indexPath)
-    local mapController = SimpleMapController:alloc():init()
-    self:navigationController():pushViewController_animated(mapController, true)
+  	local mapController = SimpleMapController:alloc():init()
+  	self:navigationController():pushViewController_animated(mapController, true)
 end
 
-</code></pre></figure>
+</code></pre>
+</div>
 <p>wax覆盖后的效果图:</p>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1263.PNG"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1263.PNG" /></p>
 
 <p>不仅替换了画面的显示,还将cell的点击事件重新定义,定义到了一个心的wax制作的 SimpleMapController页面</p>
 
-<h3>完全使用wax书写一个页面</h3>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">
-waxClass{&quot;SimpleMapController&quot;, UIViewController}
+<h3 id="wax">完全使用wax书写一个页面</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+waxClass{"SimpleMapController", UIViewController}
 function init(self)
   self.super:init()
   --设置title
-  self:setTitle(&quot;States&quot;)
+  self:setTitle("States")
   self.trends = {}
   return self
 end
@@ -290,39 +294,40 @@ function viewDidLoad(self)
   self:view():setBackgroundColor(UIColor:blueColor());
 --自定义一个Label
   local label = UILabel:initWithFrame(CGRect(100, 100, 200, 100))
-  label:setText(&quot;你好我是Lua界面&quot;)
+  label:setText("你好我是Lua界面")
   label:setTextColor(UIColor:redColor())
   self:view():addSubview(label)
 --自定义一个Button
   local play = UIButton:buttonWithType(UIButtonTypeCustom)  
   play:setFrame(CGRect(100,200, 100, 40))  
-  play:setTitle_forState(&quot;action&quot;,UIControlStateNormal);
-  play:addTarget_action_forControlEvents(self,&quot;onDeleteIconClick:&quot;,UIControlEventTouchUpInside) 
+  play:setTitle_forState("action",UIControlStateNormal);
+  play:addTarget_action_forControlEvents(self,"onDeleteIconClick:",UIControlEventTouchUpInside) 
   self:view():addSubview(play)
   --自定义一个webview
   local wb = UIWebView:initWithFrame(CGRect(0, 250, 320, 200))
-  local url = NSURLRequest:requestWithURL(NSURL:URLWithString(&quot;http://www.163.com&quot;));
+  local url = NSURLRequest:requestWithURL(NSURL:URLWithString("http://www.163.com"));
   wb:loadRequest(url);
   self:view():addSubview(wb);
-
+  
 
 
 end
 //Button 点击事件
 function onDeleteIconClick(self, sender)   
-    alert(&quot;warning&quot;,&quot;YOU CAN&quot;);
+    alert("warning","YOU CAN");
 end  
 //弹出框显示
 function alert(title,content)
-  UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,&quot;OK&quot;,nil):show()
+  UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,"OK",nil):show()
 end
 
-</code></pre></figure>
+</code></pre>
+</div>
 <p>画面效果:</p>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1265.PNG"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1265.PNG" /></p>
 
-<p>Demo下载地址:<a href="https://github.com/zhaozihui/waxDemo">https://github.com/zhaozihui/waxDemo</a></p>
+<p>Demo下载地址:https://github.com/zhaozihui/waxDemo</p>
 
   </section>
 </article>
@@ -343,7 +348,7 @@ end
    <div class="read-more-item">
        <span class="read-more-item-dim">更早的文章</span>
        <h2 class="post-list__post-title post-title"><a href="/2016/08/ipatopgyer/" title="link to iOS打包上传ipa到蒲公英">iOS打包上传ipa到蒲公英</a></h2>
-       <p class="excerpt">#! /bin/bashecho &quot;准备开始打ipa包....................&quot;#工程环境路径workspace_path=/Users/heli/Documents/gits/HL_iOS_Client#项目名称project_name=HeLiWangYeWuBangsign_name=/Users/heli/Library/MobileDevice/Provisioning\ Profiles/488e6f77-543a-4db0-81d7-7e2...&hellip;</p>
+       <p class="excerpt">#! /bin/bashecho "准备开始打ipa包...................."#工程环境路径workspace_path=/Users/heli/Documents/gits/HL_iOS_Client#项目名称project_name=HeLiWangYeWuBangsign_name=/Users/heli/Library/MobileDevice/Provisioning\ Profiles/488e6f77-543a-4db0-81d7-7e2170da158d....&hellip;</p>
        <div class="post-list__meta"><time datetime="2016-08-25 14:32:24 +0800" class="post-list__meta--date date">2016-08-25</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2016/08/ipatopgyer/>继续阅读</a></div>
    </div>
    

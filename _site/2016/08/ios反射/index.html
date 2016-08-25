@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>iOS 反射机制</title>
-  <meta name="description" content="iOS 反射机制    Class class = NSClassFromString(name);    UIViewController *vc = [[class alloc] init];    [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnul...">
+  <meta name="description" content="iOS 反射机制">
   <meta name="author" content="Wei Wang">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iOS 反射机制">
-  <meta name="twitter:description" content="iOS 反射机制    Class class = NSClassFromString(name);    UIViewController *vc = [[class alloc] init];    [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnul...">
+  <meta name="twitter:description" content="iOS 反射机制">
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="iOS 反射机制">
-  <meta property="og:description" content="iOS 反射机制    Class class = NSClassFromString(name);    UIViewController *vc = [[class alloc] init];    [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnul...">
+  <meta property="og:description" content="iOS 反射机制">
   
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -156,8 +156,9 @@
   </header>
 
   <section class="post">
-    <h4>iOS 反射机制</h4>
-<figure class="highlight"><pre><code class="language-text" data-lang="text">    Class class = NSClassFromString(name);
+    <h4 id="ios-">iOS 反射机制</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    Class class = NSClassFromString(name);
     UIViewController *vc = [[class alloc] init];
     [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([[params allKeys] containsObject:key]) {
@@ -166,7 +167,9 @@
     }];
     vc.hidesBottomBarWhenPushed = YES;
     [controller.navigationController pushViewController:vc animated:YES];
-</code></pre></figure>
+</code></pre>
+</div>
+
   </section>
 </article>
 

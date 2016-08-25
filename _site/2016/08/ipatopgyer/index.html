@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>iOS打包上传ipa到蒲公英</title>
-  <meta name="description" content="#! /bin/bash">
+  <meta name="description" content="~~~ #! /bin/bash">
   <meta name="author" content="Wei Wang">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iOS打包上传ipa到蒲公英">
-  <meta name="twitter:description" content="#! /bin/bash">
+  <meta name="twitter:description" content="~~~ #! /bin/bash">
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="iOS打包上传ipa到蒲公英">
-  <meta property="og:description" content="#! /bin/bash">
+  <meta property="og:description" content="~~~ #! /bin/bash">
   
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -156,51 +156,52 @@
   </header>
 
   <section class="post">
-    <figure class="highlight"><pre><code class="language-text" data-lang="text">#! /bin/bash
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#! /bin/bash</span>
 
 
-echo &quot;准备开始打ipa包....................&quot;
+<span class="nb">echo</span> <span class="s2">"准备开始打ipa包...................."</span>
 
-#工程环境路径
-workspace_path=/Users/heli/Documents/gits/HL_iOS_Client
-#项目名称
-project_name=HeLiWangYeWuBang
+<span class="c">#工程环境路径</span>
+<span class="nv">workspace_path</span><span class="o">=</span>/Users/heli/Documents/gits/HL_iOS_Client
+<span class="c">#项目名称</span>
+<span class="nv">project_name</span><span class="o">=</span>HeLiWangYeWuBang
 
-sign_name=/Users/heli/Library/MobileDevice/Provisioning\ Profiles/488e6f77-543a-4db0-81d7-7e2170da158d.mobileprovision
+<span class="nv">sign_name</span><span class="o">=</span>/Users/heli/Library/MobileDevice/Provisioning<span class="se">\ </span>Profiles/488e6f77-543a-4db0-81d7-7e2170da158d.mobileprovision
 
-#build的路径
-build_path=$workspace_path/$project_name
+<span class="c">#build的路径</span>
+<span class="nv">build_path</span><span class="o">=</span><span class="nv">$workspace_path</span>/<span class="nv">$project_name</span>
 
-echo &quot;第一步，进入项目工程文件: $build_path&quot;
+<span class="nb">echo</span> <span class="s2">"第一步，进入项目工程文件: </span><span class="nv">$build_path</span><span class="s2">"</span>
 
-cd $build_path
+<span class="nb">cd</span> <span class="nv">$build_path</span>
 
-echo &quot;第二步，执行build clean命令&quot;
+<span class="nb">echo</span> <span class="s2">"第二步，执行build clean命令"</span>
 
 xcodebuild clean
 
-echo &quot;第三步，执行编译生成.app命令&quot;
+<span class="nb">echo</span> <span class="s2">"第三步，执行编译生成.app命令"</span>
 
 xcodebuild
 
-echo &quot;在项目工程文件内生成一个build子目录，里面有${project_name}.App程序&quot;
+<span class="nb">echo</span> <span class="s2">"在项目工程文件内生成一个build子目录，里面有</span><span class="k">${</span><span class="nv">project_name</span><span class="k">}</span><span class="s2">.App程序"</span>
 
-echo &quot;第四步, 导出ipa包&quot;
+<span class="nb">echo</span> <span class="s2">"第四步, 导出ipa包"</span>
 
-#.app生成后的路径
-app_name_path=$build_path/build/Release-iphoneos/${project_name}.app
-#.ipa生成后的路径
-ipa_name_path=$build_path/build/Release-iphoneos/${project_name}.ipa
+<span class="c">#.app生成后的路径</span>
+<span class="nv">app_name_path</span><span class="o">=</span><span class="nv">$build_path</span>/build/Release-iphoneos/<span class="k">${</span><span class="nv">project_name</span><span class="k">}</span>.app
+<span class="c">#.ipa生成后的路径</span>
+<span class="nv">ipa_name_path</span><span class="o">=</span><span class="nv">$build_path</span>/build/Release-iphoneos/<span class="k">${</span><span class="nv">project_name</span><span class="k">}</span>.ipa
 
-#生成ipa包
-xcrun -sdk iphoneos PackageApplication -v $app_name_path -o $ipa_name_path
-ipa_name=`date &#39;+%m%d%H%M&#39;`
-cp $ipa_name_path ~/Desktop/ipas/$ipa_name.ipa 
-curl -F &quot;file=@$ipa_name_path&quot; -F &quot;uKey=&quot; -F &quot;_api_key=&quot; http://www.pgyer.com/apiv1/app/upload
+<span class="c">#生成ipa包</span>
+xcrun -sdk iphoneos PackageApplication -v <span class="nv">$app_name_path</span> -o <span class="nv">$ipa_name_path</span>
+<span class="nv">ipa_name</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">'+%m%d%H%M'</span><span class="sb">`</span>
+cp <span class="nv">$ipa_name_path</span> ~/Desktop/ipas/<span class="nv">$ipa_name</span>.ipa 
+curl -F <span class="s2">"file=@</span><span class="nv">$ipa_name_path</span><span class="s2">"</span> -F <span class="s2">"uKey="</span> -F <span class="s2">"_api_key="</span> http://www.pgyer.com/apiv1/app/upload
 open ~/Desktop/ipas/
-echo &quot;制作ipa包完成.......................&quot;
-```o
-</code></pre></figure>
+<span class="nb">echo</span> <span class="s2">"制作ipa包完成......................."</span>
+</code></pre>
+</div>
+
   </section>
 </article>
 

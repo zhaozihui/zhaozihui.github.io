@@ -4,7 +4,7 @@ title: iOS打包上传ipa到蒲公英
 date: 2016-08-25 15:32:24.000000000 +09:00
 ---
 
-``` 
+~~~ 
 #! /bin/bash
 
 
@@ -48,4 +48,4 @@ cp $ipa_name_path ~/Desktop/ipas/$ipa_name.ipa
 curl -F "file=@$ipa_name_path" -F "uKey=" -F "_api_key=" http://www.pgyer.com/apiv1/app/upload
 open ~/Desktop/ipas/
 echo "制作ipa包完成......................."
-```o
+~~~

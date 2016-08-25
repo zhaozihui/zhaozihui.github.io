@@ -10,7 +10,7 @@ wax最新github托管地址 :
 ##功能1 代码覆盖
  原始OB代码
  
-```
+~~~
  @implementation MainViewController
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -28,12 +28,12 @@ wax最新github托管地址 :
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end
-```
+~~~
 画面效果图:
 
 ![IMG_1261.PNG](http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 覆盖的lua代码
-```sh
+~~~sh
  waxClass{"MainViewController", UITableViewController}
 
 function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
@@ -43,7 +43,7 @@ function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
 	cell:textLabel():setTextColor(UIColor:redColor())
 	return cell
 end
-```
+~~~
 覆盖后画面效果图:
 
 ![IMG_1262.PNG](http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
@@ -54,7 +54,7 @@ end
 在功能1 的基础上覆盖OC的画面逻辑
 原始代码逻辑:
 
-```
+~~~
 @implementation ViewController
 {
     NSString *testStr;
@@ -86,7 +86,7 @@ end
     cell.textLabel.text = testStr;
     return cell;
 }
-```
+~~~
 原始的画面效果:
 
 ![IMG_1264.PNG](http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
@@ -94,7 +94,7 @@ end
 新的lua代码可以改变原始代码的显示和逻辑控制
 以下的代码控制原始的oc的controller 跳转到一个新的lua制作的页面
 
-```
+~~~
 require "SimpleMapController"
 
 waxClass{"ViewController", UITableViewController}
@@ -119,7 +119,7 @@ function tableView_didSelectRowAtIndexPath(self,tableView, indexPath)
   	self:navigationController():pushViewController_animated(mapController, true)
 end
 
-```
+~~~
 wax覆盖后的效果图:
 
 ![IMG_1263.PNG](http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
@@ -127,7 +127,7 @@ wax覆盖后的效果图:
 不仅替换了画面的显示,还将cell的点击事件重新定义,定义到了一个心的wax制作的 SimpleMapController页面
 
 ###完全使用wax书写一个页面
-```
+~~~
 
 waxClass{"SimpleMapController", UIViewController}
 function init(self)
@@ -170,7 +170,7 @@ function alert(title,content)
   UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,"OK",nil):show()
 end
 
-```
+~~~
 画面效果:
 
 ![IMG_1265.PNG](http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)

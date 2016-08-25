@@ -5,16 +5,17 @@
     <description></description>
     <link>http://vno.onevcat.com/</link>
     <atom:link href="http://vno.onevcat.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Aug 2016 16:24:55 +0800</pubDate>
-    <lastBuildDate>Thu, 25 Aug 2016 16:24:55 +0800</lastBuildDate>
+    <pubDate>Thu, 25 Aug 2016 16:57:31 +0800</pubDate>
+    <lastBuildDate>Thu, 25 Aug 2016 16:57:31 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
         <title>整理常用的iOS第三方资源[转]</title>
-        <description>&lt;p&gt;&lt;img src=&quot;https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTn95Js4jpQw5ipUQs7lZdc8TYz84C1jTKCbTxKFcDEMibLERNy7g&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTn95Js4jpQw5ipUQs7lZdc8TYz84C1jTKCbTxKFcDEMibLERNy7g&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;一: 第三方插件&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1:基于响应式编程思想的oc
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1:基于响应式编程思想的oc
 ]地址])https://github.com/ReactiveCocoa/ReactiveCocoa
 2：hud提示框
 地址：https://github.com/jdg/MBProgressHUD
@@ -130,9 +131,11 @@
 地址：https://github.com/CodaFi/AFNetworking-RACExtensions
 58:模糊效果（毛玻璃）
 地址：https://github.com/nicklockwood/FXBlurView
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;二：源代码实例&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1:Coding.net客户端
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1:Coding.net客户端
 地址：https://coding.net/u/coding/p/Coding-iOS/git
 2:高仿美团iOS版
 地址：https://github.com/lookingstars/meituan
@@ -152,10 +155,12 @@
 地址：https://github.com/Aufree/phphub-ios
 10:快速搭建项目源代码
 地址：https://github.com/wujunyang/MobileProject
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt; 
 三：辅助软件&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1：XCODE文档注解插件VVDocumenter
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1：XCODE文档注解插件VVDocumenter
 地址：https://github.com/onevcat/VVDocumenter-Xcode
 2：将JSON格式化输出为模型的属性
 地址：https://github.com/EnjoySR/ESJsonFormat-Xcode
@@ -163,7 +168,9 @@
 地址：https://github.com/ksuther/KSImageNamed-Xcode
 4：图片转换插件
 地址：https://github.com/rickytan/RTImageAsse
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
         <pubDate>Thu, 25 Aug 2016 15:33:24 +0800</pubDate>
         <link>http://vno.onevcat.com/2016/08/iosrecource/</link>
         <guid isPermaLink="true">http://vno.onevcat.com/2016/08/iosrecource/</guid>
@@ -173,8 +180,9 @@
     
       <item>
         <title>iOS 反射机制</title>
-        <description>&lt;h4&gt;iOS 反射机制&lt;/h4&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    Class class = NSClassFromString(name);
+        <description>&lt;h4 id=&quot;ios-&quot;&gt;iOS 反射机制&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Class class = NSClassFromString(name);
     UIViewController *vc = [[class alloc] init];
     [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([[params allKeys] containsObject:key]) {
@@ -183,7 +191,9 @@
     }];
     vc.hidesBottomBarWhenPushed = YES;
     [controller.navigationController pushViewController:vc animated:YES];
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
         <pubDate>Thu, 25 Aug 2016 15:17:24 +0800</pubDate>
         <link>http://vno.onevcat.com/2016/08/ios%E5%8F%8D%E5%B0%84/</link>
         <guid isPermaLink="true">http://vno.onevcat.com/2016/08/ios%E5%8F%8D%E5%B0%84/</guid>
@@ -194,130 +204,134 @@
       <item>
         <title>iOS使用wax 进行插件更新@it</title>
         <description>&lt;p&gt;wax最新github托管地址 :
-    &lt;a href=&quot;https://github.com/alibaba/wax&quot;&gt;https://github.com/alibaba/wax&lt;/a&gt;
+    https://github.com/alibaba/wax
 现在由alibaba进行代码的维护.&lt;/p&gt;
 
-&lt;h2&gt;功能1 代码覆盖&lt;/h2&gt;
-
+&lt;h2 id=&quot;section&quot;&gt;功能1 代码覆盖&lt;/h2&gt;
 &lt;p&gt;原始OB代码&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; @implementation MainViewController
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainViewController&lt;/span&gt;
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&amp;quot;Cell&amp;quot;];
-    cell.textLabel.text = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;, indexPath.row + 1];
-    return cell;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ViewController *vc = [[ViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-@end
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;numberOfRowsInSection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cellForRowAtIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSIndexPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;indexPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCellStyleSubtitle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Cell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;didSelectRowAtIndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSIndexPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;indexPath&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ViewController&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;err&quot;&gt; &lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pushViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vc&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;画面效果图:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1261.PNG&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1261.PNG&quot; /&gt;
 覆盖的lua代码
-```sh
- waxClass{&amp;quot;MainViewController&amp;quot;, UITableViewController}&lt;/p&gt;
+~~~sh
+ waxClass{“MainViewController”, UITableViewController}&lt;/p&gt;
 
 &lt;p&gt;function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
-    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
-    cell:textLabel():setText(&amp;quot;&amp;quot; .. (10 - indexPath:row()))
-    cell:detailTextLabel():setText(&amp;quot;zhaozihui&amp;quot;)
-    cell:textLabel():setTextColor(UIColor:redColor())
-    return cell
+	local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+	cell:textLabel():setText(“” .. (10 - indexPath:row()))
+	cell:detailTextLabel():setText(“zhaozihui”)
+	cell:textLabel():setTextColor(UIColor:redColor())
+	return cell
 end
-```
+~~~
 覆盖后画面效果图:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1262.PNG&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1262.PNG&quot; /&gt;
 功能就是替换每个cell中的显示内容&lt;/p&gt;
 
-&lt;h2&gt;功能2 控制画面逻辑&lt;/h2&gt;
-
+&lt;h2 id=&quot;section-1&quot;&gt;功能2 控制画面逻辑&lt;/h2&gt;
 &lt;p&gt;在功能1 的基础上覆盖OC的画面逻辑
 原始代码逻辑:&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@implementation ViewController
-{
-    NSString *testStr;
-}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    testStr = @&amp;quot;显示内容&amp;quot;;
-    [self setTitle:@&amp;quot;我是标题OC&amp;quot;];
-    // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    UIWebView *wb = [[UIWebView alloc] init];
-    NSURLRequest *url = [NSURLRequest requestWithURL:[NSURL URLWithString:@&amp;quot;&amp;quot;]];
-    [wb loadRequest:url];
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ViewController&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-}
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;viewDidLoad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;testStr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;显示内容&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;我是标题OC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Do any additional setup after loading the view.
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;whiteColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;UIWebView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIWebView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSURLRequest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSURLRequest&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;requestWithURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;URLWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wb&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loadRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
-}
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;didReceiveMemoryWarning&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;didReceiveMemoryWarning&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Dispose of any resources that can be recreated.
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&amp;quot;Cell&amp;quot;];
-    cell.textLabel.text = testStr;
-    return cell;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numberOfRowsInSection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cellForRowAtIndexPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSIndexPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCell&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UITableViewCellStyleSubtitle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Cell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;原始的画面效果:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1264.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1264.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;新的lua代码可以改变原始代码的显示和逻辑控制
 以下的代码控制原始的oc的controller 跳转到一个新的lua制作的页面&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;require &amp;quot;SimpleMapController&amp;quot;
 
-waxClass{&amp;quot;ViewController&amp;quot;, UITableViewController}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require &quot;SimpleMapController&quot;
 
-local string = &amp;quot;a string&amp;quot;
+waxClass{&quot;ViewController&quot;, UITableViewController}
+
+local string = &quot;a string&quot;
 function viewDidLoad(self)
- testStr = &amp;quot;哈哈哈我是lua的cell内容&amp;quot;
- self:setTitle(&amp;quot;我是标题LUA&amp;quot;);
+ testStr = &quot;哈哈哈我是lua的cell内容&quot;
+ self:setTitle(&quot;我是标题LUA&quot;);
 end
 
 function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
-    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
-    cell:textLabel():setText(&amp;quot;&amp;quot; .. indexPath:row())
-    cell:detailTextLabel():setText(testStr)
-    cell:textLabel():setTextColor(UIColor:redColor())
-    cell:detailTextLabel():setTextColor(UIColor:greenColor())
-    return cell
+	local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+	cell:textLabel():setText(&quot;&quot; .. indexPath:row())
+	cell:detailTextLabel():setText(testStr)
+	cell:textLabel():setTextColor(UIColor:redColor())
+	cell:detailTextLabel():setTextColor(UIColor:greenColor())
+	return cell
 end
 
 function tableView_didSelectRowAtIndexPath(self,tableView, indexPath)
-    local mapController = SimpleMapController:alloc():init()
-    self:navigationController():pushViewController_animated(mapController, true)
+  	local mapController = SimpleMapController:alloc():init()
+  	self:navigationController():pushViewController_animated(mapController, true)
 end
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;wax覆盖后的效果图:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1263.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1263.PNG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;不仅替换了画面的显示,还将cell的点击事件重新定义,定义到了一个心的wax制作的 SimpleMapController页面&lt;/p&gt;
 
-&lt;h3&gt;完全使用wax书写一个页面&lt;/h3&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;
-waxClass{&amp;quot;SimpleMapController&amp;quot;, UIViewController}
+&lt;h3 id=&quot;wax&quot;&gt;完全使用wax书写一个页面&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+waxClass{&quot;SimpleMapController&quot;, UIViewController}
 function init(self)
   self.super:init()
   --设置title
-  self:setTitle(&amp;quot;States&amp;quot;)
+  self:setTitle(&quot;States&quot;)
   self.trends = {}
   return self
 end
@@ -327,39 +341,40 @@ function viewDidLoad(self)
   self:view():setBackgroundColor(UIColor:blueColor());
 --自定义一个Label
   local label = UILabel:initWithFrame(CGRect(100, 100, 200, 100))
-  label:setText(&amp;quot;你好我是Lua界面&amp;quot;)
+  label:setText(&quot;你好我是Lua界面&quot;)
   label:setTextColor(UIColor:redColor())
   self:view():addSubview(label)
 --自定义一个Button
   local play = UIButton:buttonWithType(UIButtonTypeCustom)  
   play:setFrame(CGRect(100,200, 100, 40))  
-  play:setTitle_forState(&amp;quot;action&amp;quot;,UIControlStateNormal);
-  play:addTarget_action_forControlEvents(self,&amp;quot;onDeleteIconClick:&amp;quot;,UIControlEventTouchUpInside) 
+  play:setTitle_forState(&quot;action&quot;,UIControlStateNormal);
+  play:addTarget_action_forControlEvents(self,&quot;onDeleteIconClick:&quot;,UIControlEventTouchUpInside) 
   self:view():addSubview(play)
   --自定义一个webview
   local wb = UIWebView:initWithFrame(CGRect(0, 250, 320, 200))
-  local url = NSURLRequest:requestWithURL(NSURL:URLWithString(&amp;quot;http://www.163.com&amp;quot;));
+  local url = NSURLRequest:requestWithURL(NSURL:URLWithString(&quot;http://www.163.com&quot;));
   wb:loadRequest(url);
   self:view():addSubview(wb);
-
+  
 
 
 end
 //Button 点击事件
 function onDeleteIconClick(self, sender)   
-    alert(&amp;quot;warning&amp;quot;,&amp;quot;YOU CAN&amp;quot;);
+    alert(&quot;warning&quot;,&quot;YOU CAN&quot;);
 end  
 //弹出框显示
 function alert(title,content)
-  UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,&amp;quot;OK&amp;quot;,nil):show()
+  UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,&quot;OK&quot;,nil):show()
 end
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;画面效果:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1265.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1265.PNG&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Demo下载地址:&lt;a href=&quot;https://github.com/zhaozihui/waxDemo&quot;&gt;https://github.com/zhaozihui/waxDemo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo下载地址:https://github.com/zhaozihui/waxDemo&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Aug 2016 14:32:24 +0800</pubDate>
         <link>http://vno.onevcat.com/2016/08/waxupdate/</link>
@@ -370,51 +385,52 @@ end
     
       <item>
         <title>iOS打包上传ipa到蒲公英</title>
-        <description>&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#! /bin/bash
+        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/bash&lt;/span&gt;
 
 
-echo &amp;quot;准备开始打ipa包....................&amp;quot;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;准备开始打ipa包....................&quot;&lt;/span&gt;
 
-#工程环境路径
-workspace_path=/Users/heli/Documents/gits/HL_iOS_Client
-#项目名称
-project_name=HeLiWangYeWuBang
+&lt;span class=&quot;c&quot;&gt;#工程环境路径&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;workspace_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Users/heli/Documents/gits/HL_iOS_Client
+&lt;span class=&quot;c&quot;&gt;#项目名称&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;project_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;HeLiWangYeWuBang
 
-sign_name=/Users/heli/Library/MobileDevice/Provisioning\ Profiles/488e6f77-543a-4db0-81d7-7e2170da158d.mobileprovision
+&lt;span class=&quot;nv&quot;&gt;sign_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Users/heli/Library/MobileDevice/Provisioning&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Profiles/488e6f77-543a-4db0-81d7-7e2170da158d.mobileprovision
 
-#build的路径
-build_path=$workspace_path/$project_name
+&lt;span class=&quot;c&quot;&gt;#build的路径&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;build_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$workspace_path&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$project_name&lt;/span&gt;
 
-echo &amp;quot;第一步，进入项目工程文件: $build_path&amp;quot;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;第一步，进入项目工程文件: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$build_path&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 
-cd $build_path
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$build_path&lt;/span&gt;
 
-echo &amp;quot;第二步，执行build clean命令&amp;quot;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;第二步，执行build clean命令&quot;&lt;/span&gt;
 
 xcodebuild clean
 
-echo &amp;quot;第三步，执行编译生成.app命令&amp;quot;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;第三步，执行编译生成.app命令&quot;&lt;/span&gt;
 
 xcodebuild
 
-echo &amp;quot;在项目工程文件内生成一个build子目录，里面有${project_name}.App程序&amp;quot;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;在项目工程文件内生成一个build子目录，里面有&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project_name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.App程序&quot;&lt;/span&gt;
 
-echo &amp;quot;第四步, 导出ipa包&amp;quot;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;第四步, 导出ipa包&quot;&lt;/span&gt;
 
-#.app生成后的路径
-app_name_path=$build_path/build/Release-iphoneos/${project_name}.app
-#.ipa生成后的路径
-ipa_name_path=$build_path/build/Release-iphoneos/${project_name}.ipa
+&lt;span class=&quot;c&quot;&gt;#.app生成后的路径&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;app_name_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$build_path&lt;/span&gt;/build/Release-iphoneos/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project_name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.app
+&lt;span class=&quot;c&quot;&gt;#.ipa生成后的路径&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ipa_name_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$build_path&lt;/span&gt;/build/Release-iphoneos/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project_name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.ipa
 
-#生成ipa包
-xcrun -sdk iphoneos PackageApplication -v $app_name_path -o $ipa_name_path
-ipa_name=`date &amp;#39;+%m%d%H%M&amp;#39;`
-cp $ipa_name_path ~/Desktop/ipas/$ipa_name.ipa 
-curl -F &amp;quot;file=@$ipa_name_path&amp;quot; -F &amp;quot;uKey=&amp;quot; -F &amp;quot;_api_key=&amp;quot; http://www.pgyer.com/apiv1/app/upload
+&lt;span class=&quot;c&quot;&gt;#生成ipa包&lt;/span&gt;
+xcrun -sdk iphoneos PackageApplication -v &lt;span class=&quot;nv&quot;&gt;$app_name_path&lt;/span&gt; -o &lt;span class=&quot;nv&quot;&gt;$ipa_name_path&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ipa_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;date &lt;span class=&quot;s1&quot;&gt;&#39;+%m%d%H%M&#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+cp &lt;span class=&quot;nv&quot;&gt;$ipa_name_path&lt;/span&gt; ~/Desktop/ipas/&lt;span class=&quot;nv&quot;&gt;$ipa_name&lt;/span&gt;.ipa 
+curl -F &lt;span class=&quot;s2&quot;&gt;&quot;file=@&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ipa_name_path&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; -F &lt;span class=&quot;s2&quot;&gt;&quot;uKey=&quot;&lt;/span&gt; -F &lt;span class=&quot;s2&quot;&gt;&quot;_api_key=&quot;&lt;/span&gt; http://www.pgyer.com/apiv1/app/upload
 open ~/Desktop/ipas/
-echo &amp;quot;制作ipa包完成.......................&amp;quot;
-```o
-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;制作ipa包完成.......................&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
         <pubDate>Thu, 25 Aug 2016 14:32:24 +0800</pubDate>
         <link>http://vno.onevcat.com/2016/08/ipatopgyer/</link>
         <guid isPermaLink="true">http://vno.onevcat.com/2016/08/ipatopgyer/</guid>
