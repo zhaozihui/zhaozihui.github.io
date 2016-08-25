@@ -5,44 +5,419 @@
     <description></description>
     <link>http://vno.onevcat.com/</link>
     <atom:link href="http://vno.onevcat.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Aug 2016 15:34:04 +0800</pubDate>
-    <lastBuildDate>Thu, 25 Aug 2016 15:34:04 +0800</lastBuildDate>
+    <pubDate>Thu, 25 Aug 2016 16:24:55 +0800</pubDate>
+    <lastBuildDate>Thu, 25 Aug 2016 16:24:55 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
-        <title>PSD导出PNG</title>
-        <description>&lt;h3&gt;psdtopng.py&lt;/h3&gt;
+        <title>整理常用的iOS第三方资源[转]</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTn95Js4jpQw5ipUQs7lZdc8TYz84C1jTKCbTxKFcDEMibLERNy7g&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;h4&gt;Convert psd file to png files with position&lt;/h4&gt;
+&lt;p&gt;一: 第三方插件&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1:基于响应式编程思想的oc
+]地址])https://github.com/ReactiveCocoa/ReactiveCocoa
+2：hud提示框
+地址：https://github.com/jdg/MBProgressHUD
+3：XML/HTML解析
+地址：https://github.com/topfunky/hpple
+4：有文字输入时，能根据键盘是否弹出来调整自身显示内容的位置
+地址：https://github.com/michaeltyson/TPKeyboardAvoiding
+5：状态栏提示框
+地址：https://github.com/jaydee3/JDStatusBarNotification
+6：block工具包。将很多需要用delegate实现的方法整合成了block的形式
+地址：https://github.com/zwaldowski/BlocksKit
+7：图片加载
+地址：https://github.com/rs/SDWebImage
+8：正则表达式
+地址：https://github.com/wezm/RegexKitLite
+9：Masonry代码布局
+地址：https://github.com/SnapKit/Masonry
+10：弹出窗
+地址：https://github.com/sberrevoets/SDCAlertView
+11:Button的样式
+地址：https://github.com/mattlawer/BButton
+12：验证网络连接状态
+地址：https://github.com/tonymillion/Reachability
+13：自动计算表格行高
+地址：https://github.com/forkingdog/UITableView-FDTemplateLayoutCell
+14：动画效果的启动页
+地址：https://github.com/IFTTT/JazzHands
+15：iOS快速简单集成国内三大平台分享
+地址：https://github.com/xumeng/XMShareModule
+16：五项能力值展示的五边形
+地址：https://github.com/dsxNiubility/SXFiveScoreShow
+17：自动识别网址号码邮箱和表情的label
+地址：https://github.com/molon/MLEmojiLabel
+18：IM对话功能的封装
+地址：https://github.com/ZhipingYang/UUChatTableView
+19：字典转模型框架
+地址：https://github.com/CoderMJLee/MJExtension
+20：下拉上拉刷数据
+地址：https://github.com/CoderMJLee/MJRefresh
+21：表格行左右划动菜单
+地址：https://github.com/MortimerGoro/MGSwipeTableCell
+22:图文混搭
+地址:https://github.com/zhouande/TLAttributedLabel
+23:可以简单展示在UINavigationBar下方，类似Music app的播放列表视图，弹出菜单视图
+地址：https://github.com/DrummerB/BFNavigationBarDrawer
+24：比如筛选、模糊、优化、蒙版、调整大小、旋转以及保存等等。同时还提供了一个UIImageView子类从URL异步加载图片，并在下载完毕时展示图片。
+地址：https://github.com/Nyx0uf/NYXImagesKit
+25：底部TabBar
+地址：https://github.com/robbdimitrov/RDVTabBarController
+26:表情面版
+地址：https://github.com/ayushgoel/AGEmojiKeyboard
+27:记录框架
+地址：https://github.com/CocoaLumberjack/CocoaLumberjack
+28：IOS与javascript交互
+地址：https://github.com/marcuswestin/WebViewJavascriptBridge
+29：图表统计展示
+地址：https://github.com/kevinzhow/PNChart
+30:appStore评分
+地址：https://github.com/arashpayan/appirater
+31：iOS-Categories 扩展类大全
+地址：https://github.com/shaojiankui/IOS-Categories
+32：扫描二维码，仿微信效果，带有扫描条
+地址：https://github.com/JxbSir/JxbScanQR
+33:动效弹出视图(弹出窗里面为文字，可以定义弹出的方向，及显示的时间)--AMPopTip
+地址：https://github.com/andreamazz/AMPopTip
+34:基于Masonry自动计算行高扩展
+地址：https://github.com/632840804/HYBMasonryAutoCellHeight
+ 35:模仿新浪微博弹出菜单
+地址：https://github.com/wwdc14/HyPopMenuView
+ 36:搜索历史标签
+地址：https://github.com/zhiwupei/SearchHistory
+ 37：快速集成新手引导的类库
+地址：https://github.com/StrongX/XSportLight
+38：设置页面的封装
+地址：https://github.com/renzifeng/ZFSetting
+39：带箭头的弹出视图插件
+地址：https://github.com/xiekw2010/DXPopover
+40：下拉菜单插件
+地址：https://github.com/dopcn/DOPDropDownMenu/
+41：表格空白提示插件
+地址：https://github.com/dzenbot/DZNEmptyDataSet
+42:给任意UIView视图四条边框加上阴影，可以自定义阴影的颜色、粗细程度、透明程度以及位置（上下左右边框）
+地址：https://github.com/Seitk/UIView-Shadow-Maker
+43:不错的日期时间插件
+地址：https://github.com/CoderXL/UUDatePicker
+44:底部弹出选择
+地址：https://github.com/skywinder/ActionSheetPicker-3.0
+45:比较不错的引导页面插件
+地址：https://github.com/ealeksandrov/EAIntroView
+46:两个APP跳转的插件
+地址：https://github.com/usebutton/DeepLinkKit
+47:本地存取NSUserDefaults插件
+地址：https://github.com/gangverk/GVUserDefaults
+48:NSArray 和 NSDictionary关于LINQ的操作方式，封装一些常用的操作
+地址：https://github.com/ColinEberhardt/LinqToObjectiveC
+49:可以监控网络请求的内容
+地址：https://github.com/coderyi/NetworkEye
+50：时间帮助插件，可以快速获取时间，比较，增加等操作
+地址：https://github.com/MatthewYork/DateTools
+51: 不错的链式动作
+地址：https://github.com/jhurray/JHChainableAnimations
+52:弹出层视图，背景效果（可以自定义视图的内容）
+地址：https://github.com/HJaycee/JCAlertView
+53:圆形进度条的显示，中间可显示值
+地址：https://github.com/mdinacci/MDRadialProgress
+54:很帅的数据加载动画（可以用于数据列表加载的展现）
+地址：https://github.com/NghiaTranUIT/FeSpinner 
+55:一个开源的AFnetworking上层的封装（猿题库等运用）
+地址：https://github.com/yuantiku/YTKNetwork
+56:CBStoreHouseRefreshControl：一个效果很酷炫的下拉刷新控件
+地址：https://github.com/coolbeet/CBStoreHouseRefreshControl
+57:AFNetworking-RACExtensions:针对ReactiveCocoa的AF封装
+地址：https://github.com/CodaFi/AFNetworking-RACExtensions
+58:模糊效果（毛玻璃）
+地址：https://github.com/nicklockwood/FXBlurView
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;二：源代码实例&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1:Coding.net客户端
+地址：https://coding.net/u/coding/p/Coding-iOS/git
+2:高仿美团iOS版
+地址：https://github.com/lookingstars/meituan
+3:模仿网易新闻做的精仿网易新闻
+地址：https://github.com/dsxNiubility/SXNews
+4:支付宝高仿版
+地址：https://github.com/gsdios/GSD_ZHIFUBAO
+5:高仿百度传课iOS版
+地址：https://github.com/lookingstars/chuanke
+6：模仿一元云购
+地址：https://github.com/JxbSir/YiYuanYunGou
+7：wordpress源代码
+地址：https://github.com/wordpress-mobile/WordPress-iOS
+8：v2ex源代码（文章类型，若报SVProgressHUD错，则把Podfile中的SVProgressHUD移除）
+地址：https://github.com/singro/v2ex
+9:PHPHub客户端(IOS8.0以上)
+地址：https://github.com/Aufree/phphub-ios
+10:快速搭建项目源代码
+地址：https://github.com/wujunyang/MobileProject
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt; 
+三：辅助软件&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1：XCODE文档注解插件VVDocumenter
+地址：https://github.com/onevcat/VVDocumenter-Xcode
+2：将JSON格式化输出为模型的属性
+地址：https://github.com/EnjoySR/ESJsonFormat-Xcode
+3：图片提示插件
+地址：https://github.com/ksuther/KSImageNamed-Xcode
+4：图片转换插件
+地址：https://github.com/rickytan/RTImageAsse
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
+        <pubDate>Thu, 25 Aug 2016 15:33:24 +0800</pubDate>
+        <link>http://vno.onevcat.com/2016/08/iosrecource/</link>
+        <guid isPermaLink="true">http://vno.onevcat.com/2016/08/iosrecource/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>iOS 反射机制</title>
+        <description>&lt;h4&gt;iOS 反射机制&lt;/h4&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    Class class = NSClassFromString(name);
+    UIViewController *vc = [[class alloc] init];
+    [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([[params allKeys] containsObject:key]) {
+            [vc setValue:obj forKey:key];
+        }
+    }];
+    vc.hidesBottomBarWhenPushed = YES;
+    [controller.navigationController pushViewController:vc animated:YES];
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
+        <pubDate>Thu, 25 Aug 2016 15:17:24 +0800</pubDate>
+        <link>http://vno.onevcat.com/2016/08/ios%E5%8F%8D%E5%B0%84/</link>
+        <guid isPermaLink="true">http://vno.onevcat.com/2016/08/ios%E5%8F%8D%E5%B0%84/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>iOS使用wax 进行插件更新@it</title>
+        <description>&lt;p&gt;wax最新github托管地址 :
+    &lt;a href=&quot;https://github.com/alibaba/wax&quot;&gt;https://github.com/alibaba/wax&lt;/a&gt;
+现在由alibaba进行代码的维护.&lt;/p&gt;
 
-&lt;h6&gt;require:psd-tools&lt;/h6&gt;
+&lt;h2&gt;功能1 代码覆盖&lt;/h2&gt;
 
-&lt;p&gt;Command &amp;#39;python psdtopng.py 1.psd&amp;#39; ,
-Then,you will get all the png files from psd .
-Format:png_x_y_width_height.png&lt;/p&gt;
+&lt;p&gt;原始OB代码&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; @implementation MainViewController
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/zhaozihui/psdtopng/blob/master/list.png?raw=true&quot; alt=&quot;画面效果&quot;/&gt;&lt;/p&gt;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
 
-&lt;h3&gt;pngcolor.py&lt;/h3&gt;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&amp;quot;Cell&amp;quot;];
+    cell.textLabel.text = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;, indexPath.row + 1];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ViewController *vc = [[ViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;画面效果图:&lt;/p&gt;
 
-&lt;h4&gt;Get colors from image file.&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1261.PNG&quot;&gt;
+覆盖的lua代码
+```sh
+ waxClass{&amp;quot;MainViewController&amp;quot;, UITableViewController}&lt;/p&gt;
 
-&lt;h6&gt;require:psd-tools,Tkinter&lt;/h6&gt;
+&lt;p&gt;function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
+    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+    cell:textLabel():setText(&amp;quot;&amp;quot; .. (10 - indexPath:row()))
+    cell:detailTextLabel():setText(&amp;quot;zhaozihui&amp;quot;)
+    cell:textLabel():setTextColor(UIColor:redColor())
+    return cell
+end
+```
+覆盖后画面效果图:&lt;/p&gt;
 
-&lt;p&gt;Command &amp;#39;python pngcolor.py&amp;#39;,
-select a image file ,you will see the image.
-Click left mouse key,get the color of the point.
-Click right mouse key,save as out.jpg with the color (hex format &amp;#39;#FFFFFF&amp;#39;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1262.PNG&quot;&gt;
+功能就是替换每个cell中的显示内容&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/zhaozihui/psdtopng/blob/master/out.png?raw=true&quot; alt=&quot;画面效果&quot;/&gt;&lt;/p&gt;
+&lt;h2&gt;功能2 控制画面逻辑&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/zhaozihui/psdtopng&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在功能1 的基础上覆盖OC的画面逻辑
+原始代码逻辑:&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@implementation ViewController
+{
+    NSString *testStr;
+}
 
-&lt;h2&gt;Enjoy it.&lt;/h2&gt;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    testStr = @&amp;quot;显示内容&amp;quot;;
+    [self setTitle:@&amp;quot;我是标题OC&amp;quot;];
+    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    UIWebView *wb = [[UIWebView alloc] init];
+    NSURLRequest *url = [NSURLRequest requestWithURL:[NSURL URLWithString:@&amp;quot;&amp;quot;]];
+    [wb loadRequest:url];
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&amp;quot;Cell&amp;quot;];
+    cell.textLabel.text = testStr;
+    return cell;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;原始的画面效果:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1264.PNG&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;新的lua代码可以改变原始代码的显示和逻辑控制
+以下的代码控制原始的oc的controller 跳转到一个新的lua制作的页面&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;require &amp;quot;SimpleMapController&amp;quot;
+
+waxClass{&amp;quot;ViewController&amp;quot;, UITableViewController}
+
+local string = &amp;quot;a string&amp;quot;
+function viewDidLoad(self)
+ testStr = &amp;quot;哈哈哈我是lua的cell内容&amp;quot;
+ self:setTitle(&amp;quot;我是标题LUA&amp;quot;);
+end
+
+function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
+    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+    cell:textLabel():setText(&amp;quot;&amp;quot; .. indexPath:row())
+    cell:detailTextLabel():setText(testStr)
+    cell:textLabel():setTextColor(UIColor:redColor())
+    cell:detailTextLabel():setTextColor(UIColor:greenColor())
+    return cell
+end
+
+function tableView_didSelectRowAtIndexPath(self,tableView, indexPath)
+    local mapController = SimpleMapController:alloc():init()
+    self:navigationController():pushViewController_animated(mapController, true)
+end
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;wax覆盖后的效果图:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1263.PNG&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;不仅替换了画面的显示,还将cell的点击事件重新定义,定义到了一个心的wax制作的 SimpleMapController页面&lt;/p&gt;
+
+&lt;h3&gt;完全使用wax书写一个页面&lt;/h3&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;
+waxClass{&amp;quot;SimpleMapController&amp;quot;, UIViewController}
+function init(self)
+  self.super:init()
+  --设置title
+  self:setTitle(&amp;quot;States&amp;quot;)
+  self.trends = {}
+  return self
+end
+
+function viewDidLoad(self)
+--设置页面背景
+  self:view():setBackgroundColor(UIColor:blueColor());
+--自定义一个Label
+  local label = UILabel:initWithFrame(CGRect(100, 100, 200, 100))
+  label:setText(&amp;quot;你好我是Lua界面&amp;quot;)
+  label:setTextColor(UIColor:redColor())
+  self:view():addSubview(label)
+--自定义一个Button
+  local play = UIButton:buttonWithType(UIButtonTypeCustom)  
+  play:setFrame(CGRect(100,200, 100, 40))  
+  play:setTitle_forState(&amp;quot;action&amp;quot;,UIControlStateNormal);
+  play:addTarget_action_forControlEvents(self,&amp;quot;onDeleteIconClick:&amp;quot;,UIControlEventTouchUpInside) 
+  self:view():addSubview(play)
+  --自定义一个webview
+  local wb = UIWebView:initWithFrame(CGRect(0, 250, 320, 200))
+  local url = NSURLRequest:requestWithURL(NSURL:URLWithString(&amp;quot;http://www.163.com&amp;quot;));
+  wb:loadRequest(url);
+  self:view():addSubview(wb);
+
+
+
+end
+//Button 点击事件
+function onDeleteIconClick(self, sender)   
+    alert(&amp;quot;warning&amp;quot;,&amp;quot;YOU CAN&amp;quot;);
+end  
+//弹出框显示
+function alert(title,content)
+  UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,&amp;quot;OK&amp;quot;,nil):show()
+end
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;画面效果:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320&quot; alt=&quot;IMG_1265.PNG&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Demo下载地址:&lt;a href=&quot;https://github.com/zhaozihui/waxDemo&quot;&gt;https://github.com/zhaozihui/waxDemo&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Aug 2016 14:32:24 +0800</pubDate>
-        <link>http://vno.onevcat.com/2016/08/PSDToPng/</link>
-        <guid isPermaLink="true">http://vno.onevcat.com/2016/08/PSDToPng/</guid>
+        <link>http://vno.onevcat.com/2016/08/waxupdate/</link>
+        <guid isPermaLink="true">http://vno.onevcat.com/2016/08/waxupdate/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>iOS打包上传ipa到蒲公英</title>
+        <description>&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#! /bin/bash
+
+
+echo &amp;quot;准备开始打ipa包....................&amp;quot;
+
+#工程环境路径
+workspace_path=/Users/heli/Documents/gits/HL_iOS_Client
+#项目名称
+project_name=HeLiWangYeWuBang
+
+sign_name=/Users/heli/Library/MobileDevice/Provisioning\ Profiles/488e6f77-543a-4db0-81d7-7e2170da158d.mobileprovision
+
+#build的路径
+build_path=$workspace_path/$project_name
+
+echo &amp;quot;第一步，进入项目工程文件: $build_path&amp;quot;
+
+cd $build_path
+
+echo &amp;quot;第二步，执行build clean命令&amp;quot;
+
+xcodebuild clean
+
+echo &amp;quot;第三步，执行编译生成.app命令&amp;quot;
+
+xcodebuild
+
+echo &amp;quot;在项目工程文件内生成一个build子目录，里面有${project_name}.App程序&amp;quot;
+
+echo &amp;quot;第四步, 导出ipa包&amp;quot;
+
+#.app生成后的路径
+app_name_path=$build_path/build/Release-iphoneos/${project_name}.app
+#.ipa生成后的路径
+ipa_name_path=$build_path/build/Release-iphoneos/${project_name}.ipa
+
+#生成ipa包
+xcrun -sdk iphoneos PackageApplication -v $app_name_path -o $ipa_name_path
+ipa_name=`date &amp;#39;+%m%d%H%M&amp;#39;`
+cp $ipa_name_path ~/Desktop/ipas/$ipa_name.ipa 
+curl -F &amp;quot;file=@$ipa_name_path&amp;quot; -F &amp;quot;uKey=&amp;quot; -F &amp;quot;_api_key=&amp;quot; http://www.pgyer.com/apiv1/app/upload
+open ~/Desktop/ipas/
+echo &amp;quot;制作ipa包完成.......................&amp;quot;
+```o
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
+        <pubDate>Thu, 25 Aug 2016 14:32:24 +0800</pubDate>
+        <link>http://vno.onevcat.com/2016/08/ipatopgyer/</link>
+        <guid isPermaLink="true">http://vno.onevcat.com/2016/08/ipatopgyer/</guid>
         
         
       </item>

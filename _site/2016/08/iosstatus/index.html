@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>转:iOS应用程序生命周期(前后台切换,应用的各种状态)详解</title>
+  <meta name="description" content="iOS的应用程序的生命周期，还有程序是运行在前台还是后台，应用程序各个状态的变换，这些对于开发者来说都是很重要的。 iOS系统的资源是有限的，应用程序在前台和在后台的状态是不一样的。在后台时，程序会受到系统的很多限制，这样可以提高电池的使用和用户体验。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="转:iOS应用程序生命周期(前后台切换,应用的各种状态)详解">
+  <meta name="twitter:description" content="iOS的应用程序的生命周期，还有程序是运行在前台还是后台，应用程序各个状态的变换，这些对于开发者来说都是很重要的。 iOS系统的资源是有限的，应用程序在前台和在后台的状态是不一样的。在后台时，程序会受到系统的很多限制，这样可以提高电池的使用和用户体验。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="转:iOS应用程序生命周期(前后台切换,应用的各种状态)详解">
+  <meta property="og:description" content="iOS的应用程序的生命周期，还有程序是运行在前台还是后台，应用程序各个状态的变换，这些对于开发者来说都是很重要的。 iOS系统的资源是有限的，应用程序在前台和在后台的状态是不一样的。在后台时，程序会受到系统的很多限制，这样可以提高电池的使用和用户体验。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://vno.onevcat.com/2016/08/iosstatus/">
+  <link rel="alternate" type="application/rss+xml" title="紫晖のBlog" href="http://vno.onevcat.com/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 紫晖のBlog 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="紫晖のBlog logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 紫晖のBlog" class="blog-button">紫晖のBlog</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">简单的技术积累</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description"></p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description"><a href="https://github.com/zhaozihui" target="_blank">My Github</a></p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+                  <li class="navigation__item"><a href="https://github.com/zhaozihui" target="_blank" title="My Projects">Projects</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/zhao0285" title="@zhao0285 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/zhaozihui" title="@zhaozihui 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/zhaozihui" title="@zhaozihui" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:zhaozihui@gmail.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-08-25 14:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2016-08-25</time> &#8226; <span class="post-meta__tags tags"></span>
+    </div>
+    <h1 class="post-title">转:iOS应用程序生命周期(前后台切换,应用的各种状态)详解</h1>
+  </header>
+
+  <section class="post">
+    <p>iOS的应用程序的生命周期，还有程序是运行在前台还是后台，应用程序各个状态的变换，这些对于开发者来说都是很重要的。 iOS系统的资源是有限的，应用程序在前台和在后台的状态是不一样的。在后台时，程序会受到系统的很多限制，这样可以提高电池的使用和用户体验。</p>
+
+<p>//开发app,我们要遵循apple公司的一些指导原则，原则如下：</p>
+
+<p>1、应用程序的状态</p>
+
+<p>状态如下：</p>
+
+<p>Not running  未运行  程序没启动</p>
+
+<p>Inactive          未激活        程序在前台运行，不过没有接收到事件。在没有事件处理情况下程序通常停留在这个状态</p>
+
+<p>Active             激活           程序在前台运行而且接收到了事件。这也是前台的一个正常的模式</p>
+
+<p>Backgroud     后台           程序在后台而且能执行代码，大多数程序进入这个状态后会在在这个状态上停留一会。时间到之后会进入挂起状态(Suspended)。有的程序经过特殊的请求后可以长期处于Backgroud状态</p>
+
+<p>Suspended    挂起           程序在后台不能执行代码。系统会自动把程序变成这个状态而且不会发出通知。当挂起时，程序还是停留在内存中的，当系统内存低时，系统就把挂起的程序清除掉，为前台程序提供更多的内存。</p>
+
+<p>下图是程序状态变化图：</p>
+
+<p>各个程序运行状态时代理的回调：</p>
+
+<ul>
+<li>(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions</li>
+</ul>
+
+<p>告诉代理进程启动但还没进入状态保存</p>
+
+<ul>
+<li>(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions</li>
+</ul>
+
+<p>告诉代理启动基本完成程序准备开始运行</p>
+
+<ul>
+<li>(void)applicationWillResignActive:(UIApplication *)application</li>
+</ul>
+
+<p>当应用程序将要入非活动状态执行，在此期间，应用程序不接收消息或事件，比如来电话了</p>
+
+<ul>
+<li>(void)applicationDidBecomeActive:(UIApplication *)application</li>
+</ul>
+
+<p>当应用程序入活动状态执行，这个刚好跟上面那个方法相反</p>
+
+<ul>
+<li>(void)applicationDidEnterBackground:(UIApplication *)application</li>
+</ul>
+
+<p>当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可</p>
+
+<ul>
+<li>(void)applicationWillEnterForeground:(UIApplication *)application</li>
+</ul>
+
+<p>当程序从后台将要重新回到前台时候调用，这个刚好跟上面的那个方法相反。</p>
+
+<ul>
+<li>(void)applicationWillTerminate:(UIApplication *)application</li>
+</ul>
+
+<p>当程序将要退出是被调用，通常是用来保存数据和一些退出前的清理工作。这个需要要设置UIApplicationExitsOnSuspend的键值。</p>
+
+<ul>
+<li>(void)applicationDidFinishLaunching:(UIApplication*)application</li>
+</ul>
+
+<p>当程序载入后执行</p>
+
+<p>在上面8个方法对应的方法中键入NSLog打印。</p>
+
+<p>现在启动程序看看执行的顺序：</p>
+
+<p>启动程序</p>
+
+<p>lifeCycle[40428:11303] willFinishLaunchingWithOptions</p>
+
+<p>lifeCycle[40428:11303] didFinishLaunchingWithOptions</p>
+
+<p>lifeCycle[40428:11303] applicationDidBecomeActive</p>
+
+<p>按下home键</p>
+
+<p>lifeCycle[40428:11303] applicationWillResignActive</p>
+
+<p>lifeCycle[40428:11303] applicationDidEnterBackground</p>
+
+<p>双击home键，再打开程序</p>
+
+<p>lifeCycle[40428:11303] applicationWillEnterForeground</p>
+
+<p>lifeCycle[40428:11303] applicationDidBecomeActive</p>
+
+<p>2、应用程序的生命周期</p>
+
+<p>2.1、加载应用程序进入前台</p>
+
+<p>2.2、加载应用程序进入后台</p>
+
+<p>2.3、关于main函数</p>
+
+<p>main函数是程序启动的入口，在iOS app中，main函数的功能被最小化，它的主要工作都交给了UIKit framework</p>
+
+<p>[cpp]view plaincopy</p>
+
+<h1>import</h1>
+
+<p>intmain(intargc,char*argv[])</p>
+
+<p>{</p>
+
+<p>@autoreleasepool {</p>
+
+<p>returnUIApplicationMain(argc, argv, nil, NSStringFromClass([MyAppDelegateclass]));</p>
+
+<p>}
+}</p>
+
+<p>UIApplicationMain函数有四个参数，你不需要改变这些参数值，不过我们也需要理解这些参数和程序是如何开始的</p>
+
+<p>argc 和argv参数包含了系统带过来的启动时间。  第三个参数确定了主要应用程序类的名称，这个参数指定为nil，这样UIKit就会使用默认的程序类UIApplication。第四个参数是程序自定义的代理类名，这个类负责系统和代码之间的交互。它一般在Xcode新建项目时会自动生成。</p>
+
+<p>另外 UIApplicationMain函数加载了程序主界面的文件。虽然这个函数加载了界面文件，但是没有放到应用程序的windows上，你需要在Delegate的 application:willFinishLaunchingWithOptions方法中加载它。</p>
+
+<p>一个应用程序可以有一个主的storyboard文件或者有一个主的nib文件，但不能同时有两个存在。</p>
+
+<p>如果程序在启动时没有自动加载主要的故事版或nib文件，你可以在application:willFinishLaunchingWithOptions方法里准备windows的展示。</p>
+
+<p>3、响应中断</p>
+
+<p>3.1 当一个基于警告式的中断发生时，比如有电话打进来了，这是程序会临时进入inactive状态，这用户可以选择如何处理这个中断，流程如下图：</p>
+
+<p>在iOS5,通知不会把程序变成为激活状态，通知会显示在状态栏上，如果你；拉下状态栏，程序会变成inactive,把状态栏放回去，程序变回active。</p>
+
+<p>按锁屏键也是另外一种程序的中断，当你按下锁屏键，系统屏蔽了所有触摸事件，把app放到了后台，这时app状态是 inactive，并进入后台。</p>
+
+<p>3.2 当有这些中断时，我们的app该怎么办呢？我们应该在applicationWillResignActive:方法中：</p>
+
+<p>停止timer 和其他周期性的任务</p>
+
+<p>停止任何正在运行的请求</p>
+
+<p>暂停视频的播放</p>
+
+<p>如果是游戏那就暂停它</p>
+
+<p>减少OpenGL ES的帧率</p>
+
+<p>挂起任何分发的队列和不重要的操作队列（你可以继续处理网络请求或其他时间敏感的后台任务）。</p>
+
+<p>当程序回到active状态 ，applicationDidBecomeActive:方法应该上面提到的任务重新开始，比如重新开始timer, 继续分发队列，提高OpenGL ES的帧率。不过游戏要回到暂停状态，不能自动开始。</p>
+
+<p>4、转到后台运行</p>
+
+<p>4.1 如图所示：</p>
+
+<p>PS:只有在IOS4以上系统或者支持多任务的设备才能后台运行。不然会直接结束状态。</p>
+
+<p>4.2 当应用程序进入后台时，我们应该做写什么呢？</p>
+
+<p>保存用户数据或状态信息，所有没写到磁盘的文件或信息，在进入后台时，最后都写到磁盘去，因为程序可能在后台被杀死，</p>
+
+<p>释放尽可能释放的内存</p>
+
+<p>applicationDidEnterBackgound: 方法有大概5秒的时间让你完成这些任务。如果超过时间还有未完成的任务，你的程序就会被终止而且从内存中清除。如果还需要长时间的运行任务，可以调用beginBackgroundTaskWithExpirationHandler方法去请求后台运行时间和启动线程来运行长时间运行的任务。</p>
+
+<p>4.3 应用程序在后台时的内存使用</p>
+
+<p>在后台时，每个应用程序都应该释放最大的内存。系统努力的保持更多的应用程序在后台同时 运行。不过当内存不足时，会终止一些挂起的程序来回收内存，那些内存最大的程序首先被终止。</p>
+
+<p>事实上，应用程序应该的对象如果不再使用了，那就应该尽快的去掉强引用，这样编译器可以回收这些内存。如果你想缓存一些对象提升程序的性能，你可以在进入后台时，把这些对象去掉强引用。</p>
+
+<p>下面这样的对象应该尽快的去掉强引用：</p>
+
+<p>图片对象</p>
+
+<p>你可以重新加载的 大的视频或数据文件</p>
+
+<p>任何没用而且可以轻易创建的对象</p>
+
+<p>在后台时，为了减少程序占用的内存，系统会自动在回收一些系统帮助你开辟的内存。比如：</p>
+
+<p>系统回收Core Animation的后备存储。</p>
+
+<p>去掉任何系统引用的缓存图片</p>
+
+<p>去掉系统管理数据缓存强引用</p>
+
+<p>5 、返回前台运行</p>
+
+<p>流程如图所示：</p>
+
+<p>当app处于挂起状态时，它是不能执行任何代码的。因此它不能处理在挂起期间发过来的通知，比如方向改变，时间改变，设置的改变还有其他影响程序展现的或状态的通知。在程序返回后台或前台是，程序都要正确的处理这些通知。</p>
+
+<p>6、程序的终止</p>
+
+<p>程序只要符合以下情况之一，只要进入后台或挂起状态就会终止：</p>
+
+<p>iOS4.0以前的系统</p>
+
+<p>app是基于iOS4.0之前系统开发的。</p>
+
+<p>设备不支持多任务</p>
+
+<p>在Info.plist文件中，程序包含了UIApplicationExitsOnSuspend键。</p>
+
+<p>app如果终止了  ,系统会调用app的代理的方法applicationWillTerminate:这样可以让你可以做一些清理工作。你可以保存一些数据或app的状态。这个方法也有5秒钟的限制。超时后方法会返回程序从内存中清除。</p>
+
+<p>注意：用户可以手工关闭应用程序。</p>
+
+<p>7、 The Main Run Loop  主运行循环</p>
+
+<p>Main Run Loop负责处理用户相关的事件。UIApplication对象在程序启动时启动main run Loop，它处理事件和更新视图的界面。看Main Run Loop就知道，它是运行在程序的主线程上的。这样保证了接收到用户相关操作的事件是按顺序处理的。</p>
+
+<p>Main Run Loop  处理事件的架构图：</p>
+
+<p>用户操作设备，相关的操作事件被系统生成并通过UIKit的指定端口分发。事件在内部排成队列，一个个的分发到Main run loop 去做处理。UIApplication对象是第一个接收到时间的对象，它决定事件如何被处理。触摸事件分发到主窗口，窗口再分发到对应出发触摸事件的View。其他的事件通过其他途径分发给其他对象变量做处理。</p>
+
+<p>大部分的事件可以在你的应用里分发，类似于触摸事件，远程操控事件（线控耳机等）都是由app的responder objects对象处理的。Responder objects 在你的app里到处都是，比如：UIApplication 对象。view对象，view controller 对象，都是resopnder objects。大部分事件的目标都指定了resopnder object，不过事件也可以传递给其他对象。比如，如果view对象不处理事件，可以传给父类view或者view controller。</p>
+
+<p>参考：<a href="https://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html#//apple_ref/doc/uid/TP40007072-CH4-SW20">https://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html#//apple_ref/doc/uid/TP40007072-CH4-SW20</a></p>
+
+<p>容芳志 (<a href="http://blog.csdn.net/totogo2010">http://blog.csdn.net/totogo2010</a>)</p>
+
+<p>原帖:<a href="http://blog.csdn.net/totogo2010/article/details/8048652">http://blog.csdn.net/totogo2010/article/details/8048652</a></p>
+
+<p>本文遵循“署名-非商业用途-保持一致”创作公用协议</p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2016/08/ipatopgyer/" title="link to iOS打包上传ipa到蒲公英">iOS打包上传ipa到蒲公英</a></h2>
+       <p class="excerpt">#! /bin/bashecho &quot;准备开始打ipa包....................&quot;#工程环境路径workspace_path=/Users/heli/Documents/gits/HL_iOS_Client#项目名称project_name=HeLiWangYeWuBangsign_name=/Users/heli/Library/MobileDevice/Provisioning\ Profiles/488e6f77-543a-4db0-81d7-7e2...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2016-08-25 14:32:24 +0800" class="post-list__meta--date date">2016-08-25</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2016/08/ipatopgyer/>继续阅读</a></div>
+   </div>
+   
+   
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://vno.onevcat.com/2016/08/iosstatus/";
+        this.page.identifier = "/2016/08/iosstatus/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-08-25 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="zhaozihui.github.io”>@zhaozihui</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

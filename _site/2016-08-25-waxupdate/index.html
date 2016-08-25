@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>iOS使用wax 进行插件更新@it</title>
+  <meta name="description" content="">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="iOS使用wax 进行插件更新@it">
+  <meta name="twitter:description" content="">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="iOS使用wax 进行插件更新@it">
+  <meta property="og:description" content="">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://vno.onevcat.com/2016-08-25-waxupdate/">
+  <link rel="alternate" type="application/rss+xml" title="紫晖のBlog" href="http://vno.onevcat.com/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 紫晖のBlog 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="紫晖のBlog logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 紫晖のBlog" class="blog-button">紫晖のBlog</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">简单的技术积累</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description"></p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description"><a href="https://github.com/zhaozihui" target="_blank">My Github</a></p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+                  <li class="navigation__item"><a href="https://github.com/zhaozihui" target="_blank" title="My Projects">Projects</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/zhao0285" title="@zhao0285 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/zhaozihui" title="@zhaozihui 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/zhaozihui" title="@zhaozihui" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:zhaozihui@gmail.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-08-25 14:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2016-08-25</time> &#8226; <span class="post-meta__tags tags"></span>
+    </div>
+    <h1 class="post-title">iOS使用wax 进行插件更新@it</h1>
+  </header>
+
+  <section class="post">
+    <p>wax最新github托管地址 :
+    <a href="https://github.com/alibaba/wax">https://github.com/alibaba/wax</a>
+现在由alibaba进行代码的维护.</p>
+
+<h2>功能1 代码覆盖</h2>
+
+<p>原始OB代码</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text"> @implementation MainViewController
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&quot;Cell&quot;];
+    cell.textLabel.text = [NSString stringWithFormat:@&quot;%d&quot;, indexPath.row + 1];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ViewController *vc = [[ViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+@end
+</code></pre></figure>
+<p>画面效果图:</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-9b1ad36252699a58.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1261.PNG">
+覆盖的lua代码
+```sh
+ waxClass{&quot;MainViewController&quot;, UITableViewController}</p>
+
+<p>function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
+    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+    cell:textLabel():setText(&quot;&quot; .. (10 - indexPath:row()))
+    cell:detailTextLabel():setText(&quot;zhaozihui&quot;)
+    cell:textLabel():setTextColor(UIColor:redColor())
+    return cell
+end
+```
+覆盖后画面效果图:</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-b1a8cd321b204aa8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1262.PNG">
+功能就是替换每个cell中的显示内容</p>
+
+<h2>功能2 控制画面逻辑</h2>
+
+<p>在功能1 的基础上覆盖OC的画面逻辑
+原始代码逻辑:</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">@implementation ViewController
+{
+    NSString *testStr;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    testStr = @&quot;显示内容&quot;;
+    [self setTitle:@&quot;我是标题OC&quot;];
+    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    UIWebView *wb = [[UIWebView alloc] init];
+    NSURLRequest *url = [NSURLRequest requestWithURL:[NSURL URLWithString:@&quot;&quot;]];
+    [wb loadRequest:url];
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@&quot;Cell&quot;];
+    cell.textLabel.text = testStr;
+    return cell;
+}
+</code></pre></figure>
+<p>原始的画面效果:</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-1944eec44c45bf5a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1264.PNG"></p>
+
+<p>新的lua代码可以改变原始代码的显示和逻辑控制
+以下的代码控制原始的oc的controller 跳转到一个新的lua制作的页面</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">require &quot;SimpleMapController&quot;
+
+waxClass{&quot;ViewController&quot;, UITableViewController}
+
+local string = &quot;a string&quot;
+function viewDidLoad(self)
+ testStr = &quot;哈哈哈我是lua的cell内容&quot;
+ self:setTitle(&quot;我是标题LUA&quot;);
+end
+
+function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
+    local cell = self:ORIGtableView_cellForRowAtIndexPath(tableView, indexPath)
+    cell:textLabel():setText(&quot;&quot; .. indexPath:row())
+    cell:detailTextLabel():setText(testStr)
+    cell:textLabel():setTextColor(UIColor:redColor())
+    cell:detailTextLabel():setTextColor(UIColor:greenColor())
+    return cell
+end
+
+function tableView_didSelectRowAtIndexPath(self,tableView, indexPath)
+    local mapController = SimpleMapController:alloc():init()
+    self:navigationController():pushViewController_animated(mapController, true)
+end
+
+</code></pre></figure>
+<p>wax覆盖后的效果图:</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-c33954d87a3fd79e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1263.PNG"></p>
+
+<p>不仅替换了画面的显示,还将cell的点击事件重新定义,定义到了一个心的wax制作的 SimpleMapController页面</p>
+
+<h3>完全使用wax书写一个页面</h3>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">
+waxClass{&quot;SimpleMapController&quot;, UIViewController}
+function init(self)
+  self.super:init()
+  --设置title
+  self:setTitle(&quot;States&quot;)
+  self.trends = {}
+  return self
+end
+
+function viewDidLoad(self)
+--设置页面背景
+  self:view():setBackgroundColor(UIColor:blueColor());
+--自定义一个Label
+  local label = UILabel:initWithFrame(CGRect(100, 100, 200, 100))
+  label:setText(&quot;你好我是Lua界面&quot;)
+  label:setTextColor(UIColor:redColor())
+  self:view():addSubview(label)
+--自定义一个Button
+  local play = UIButton:buttonWithType(UIButtonTypeCustom)  
+  play:setFrame(CGRect(100,200, 100, 40))  
+  play:setTitle_forState(&quot;action&quot;,UIControlStateNormal);
+  play:addTarget_action_forControlEvents(self,&quot;onDeleteIconClick:&quot;,UIControlEventTouchUpInside) 
+  self:view():addSubview(play)
+  --自定义一个webview
+  local wb = UIWebView:initWithFrame(CGRect(0, 250, 320, 200))
+  local url = NSURLRequest:requestWithURL(NSURL:URLWithString(&quot;http://www.163.com&quot;));
+  wb:loadRequest(url);
+  self:view():addSubview(wb);
+
+
+
+end
+//Button 点击事件
+function onDeleteIconClick(self, sender)   
+    alert(&quot;warning&quot;,&quot;YOU CAN&quot;);
+end  
+//弹出框显示
+function alert(title,content)
+  UIAlertView:alloc():initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(title,content,nil,&quot;OK&quot;,nil):show()
+end
+
+</code></pre></figure>
+<p>画面效果:</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1185668-42155fcc137a004d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/320" alt="IMG_1265.PNG"></p>
+
+<p>Demo下载地址:<a href="https://github.com/zhaozihui/waxDemo">https://github.com/zhaozihui/waxDemo</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://vno.onevcat.com/2016-08-25-waxupdate/";
+        this.page.identifier = "/2016-08-25-waxupdate/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-08-25 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="zhaozihui.github.io”>@zhaozihui</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>
