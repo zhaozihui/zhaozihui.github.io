@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>iOS打包上传ipa到蒲公英</title>
-  <meta name="description" content="~~~ #! /bin/bash">
+  <title>Nexus刷入第三方rom</title>
+  <meta name="description" content="">
   <meta name="author" content="Wei Wang">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="iOS打包上传ipa到蒲公英">
-  <meta name="twitter:description" content="~~~ #! /bin/bash">
+  <meta name="twitter:title" content="Nexus刷入第三方rom">
+  <meta name="twitter:description" content="">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="iOS打包上传ipa到蒲公英">
-  <meta property="og:description" content="~~~ #! /bin/bash">
+  <meta property="og:title" content="Nexus刷入第三方rom">
+  <meta property="og:description" content="">
   
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://vno.onevcat.com/2016/08/ipatopgyer/">
+  <link rel="canonical" href="http://vno.onevcat.com/2016/09/nexusrom/">
   <link rel="alternate" type="application/rss+xml" title="紫晖のBlog" href="http://vno.onevcat.com/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -150,55 +150,50 @@
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2016-08-25 14:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2016-08-25</time> &#8226; <span class="post-meta__tags tags"></span>
+      <time datetime="2016-09-02 08:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2016-09-02</time> &#8226; <span class="post-meta__tags tags"></span>
     </div>
-    <h1 class="post-title">iOS打包上传ipa到蒲公英</h1>
+    <h1 class="post-title">Nexus刷入第三方rom</h1>
   </header>
 
   <section class="post">
-    <div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#! /bin/bash</span>
+    <p><img src="https://lh3.googleusercontent.com/ms7mwMf7R0GX-lvCrfFptekdsTSMcKyJeFNtIyIGx-q_W3TnSs_E2zShxAaug75otw" alt="" /></p>
+
+<p>刷机教程</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+1. 下载第三方Rom,例如pure
+2. 下载twrp文件
+3. 连接你的手机和电脑
+4. 打开开发者模式
+5. 打开USB调试
+6. 导入第三方Rom到手机sd卡中
+7. 使用adb 命令启动手机的 fastboot模式
+
+adb reboot bootloader 
+
+8. 解锁你的手机
+
+fastboot flashing unlock
+
+对于比较旧的版本的手机 使用命令
+
+fastboot oem unlock
+
+这个时候手机会显示确认画面,确认解锁
+
+9. 输入twrp文件
+
+fastboot flash recovery twrp.img
+10. 刷入成功后，可以在bootloader状态下，用音量键来选择"recovery mode"来进入twrp
+11. 刷入 sd卡中的rom
+完成
 
 
-<span class="nb">echo</span> <span class="s2">"准备开始打ipa包...................."</span>
+*如果遇到 提示vendor 与系统不符合的情况,请自行刷入 vendor包
 
-<span class="c">#工程环境路径</span>
-<span class="nv">workspace_path</span><span class="o">=</span>/Users/heli/Documents/gits/HL_iOS_Client
-<span class="c">#项目名称</span>
-<span class="nv">project_name</span><span class="o">=</span>HeLiWangYeWuBang
+fastboot flashing vendor vendor.img
+vendor.img 在官方的image中可以找到
 
-<span class="nv">sign_name</span><span class="o">=</span>/Users/heli/Library/MobileDevice/Provisioning<span class="se">\ </span>Profiles/488e6f77-543a-4db0-81d7-7e2170da158d.mobileprovision
-
-<span class="c">#build的路径</span>
-<span class="nv">build_path</span><span class="o">=</span><span class="nv">$workspace_path</span>/<span class="nv">$project_name</span>
-
-<span class="nb">echo</span> <span class="s2">"第一步，进入项目工程文件: </span><span class="nv">$build_path</span><span class="s2">"</span>
-
-<span class="nb">cd</span> <span class="nv">$build_path</span>
-
-<span class="nb">echo</span> <span class="s2">"第二步，执行build clean命令"</span>
-
-xcodebuild clean
-
-<span class="nb">echo</span> <span class="s2">"第三步，执行编译生成.app命令"</span>
-
-xcodebuild
-
-<span class="nb">echo</span> <span class="s2">"在项目工程文件内生成一个build子目录，里面有</span><span class="k">${</span><span class="nv">project_name</span><span class="k">}</span><span class="s2">.App程序"</span>
-
-<span class="nb">echo</span> <span class="s2">"第四步, 导出ipa包"</span>
-
-<span class="c">#.app生成后的路径</span>
-<span class="nv">app_name_path</span><span class="o">=</span><span class="nv">$build_path</span>/build/Release-iphoneos/<span class="k">${</span><span class="nv">project_name</span><span class="k">}</span>.app
-<span class="c">#.ipa生成后的路径</span>
-<span class="nv">ipa_name_path</span><span class="o">=</span><span class="nv">$build_path</span>/build/Release-iphoneos/<span class="k">${</span><span class="nv">project_name</span><span class="k">}</span>.ipa
-
-<span class="c">#生成ipa包</span>
-xcrun -sdk iphoneos PackageApplication -v <span class="nv">$app_name_path</span> -o <span class="nv">$ipa_name_path</span>
-<span class="nv">ipa_name</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">'+%m%d%H%M'</span><span class="sb">`</span>
-cp <span class="nv">$ipa_name_path</span> ~/Desktop/ipas/<span class="nv">$ipa_name</span>.ipa 
-curl -F <span class="s2">"file=@</span><span class="nv">$ipa_name_path</span><span class="s2">"</span> -F <span class="s2">"uKey="</span> -F <span class="s2">"_api_key="</span> http://www.pgyer.com/apiv1/app/upload
-open ~/Desktop/ipas/
-<span class="nb">echo</span> <span class="s2">"制作ipa包完成......................."</span>
 </code></pre>
 </div>
 
@@ -208,14 +203,14 @@ open ~/Desktop/ipas/
 <section class="read-more">
    
    
+   
+   
    <div class="read-more-item">
-       <span class="read-more-item-dim">最近的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="/2016/08/waxupdate/" title="link to iOS使用wax 进行插件更新@it">iOS使用wax 进行插件更新@it</a></h2>
-       <p class="excerpt">wax最新github托管地址 :    https://github.com/alibaba/wax现在由alibaba进行代码的维护.功能1 代码覆盖原始OB代码 @implementation MainViewController- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    return 10;}- (UITableViewCell *)tab...&hellip;</p>
-       <div class="post-list__meta"><time datetime="2016-08-25 14:32:24 +0800" class="post-list__meta--date date">2016-08-25</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2016/08/waxupdate/>继续阅读</a></div>
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2016/09/nexusimage/" title="link to Nexus 原生系统刷机教程">Nexus 原生系统刷机教程</a></h2>
+       <p class="excerpt">教程1. 下载官方[刷机包](https://developers.google.com/android/nexus/images)2. 连接你的手机和电脑3. 打开开发者模式4. 打开USB调试5. 使用adb 命令启动手机的 fastboot模式adb reboot bootloader 6. 解锁你的手机fastboot flashing unlock对于比较旧的版本的手机 使用命令fastboot oem unlock这个时候手机会显示确认画面,确认解锁7. 打开电脑终端,并解压缩...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2016-09-02 08:32:24 +0800" class="post-list__meta--date date">2016-09-02</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2016/09/nexusimage/>继续阅读</a></div>
    </div>
-   
-   
    
 </section>
 
@@ -225,8 +220,8 @@ open ~/Desktop/ipas/
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://vno.onevcat.com/2016/08/ipatopgyer/";
-        this.page.identifier = "/2016/08/ipatopgyer/";
+        this.page.url = "http://vno.onevcat.com/2016/09/nexusrom/";
+        this.page.identifier = "/2016/09/nexusrom/";
     };
 
     var disqus_shortname = 'vno-jekyll';

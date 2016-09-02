@@ -5,9 +5,117 @@
     <description></description>
     <link>http://vno.onevcat.com/</link>
     <atom:link href="http://vno.onevcat.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Aug 2016 16:57:31 +0800</pubDate>
-    <lastBuildDate>Thu, 25 Aug 2016 16:57:31 +0800</lastBuildDate>
+    <pubDate>Fri, 02 Sep 2016 10:00:21 +0800</pubDate>
+    <lastBuildDate>Fri, 02 Sep 2016 10:00:21 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Nexus刷入第三方rom</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/ms7mwMf7R0GX-lvCrfFptekdsTSMcKyJeFNtIyIGx-q_W3TnSs_E2zShxAaug75otw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;刷机教程&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+1. 下载第三方Rom,例如pure
+2. 下载twrp文件
+3. 连接你的手机和电脑
+4. 打开开发者模式
+5. 打开USB调试
+6. 导入第三方Rom到手机sd卡中
+7. 使用adb 命令启动手机的 fastboot模式
+
+adb reboot bootloader 
+
+8. 解锁你的手机
+
+fastboot flashing unlock
+
+对于比较旧的版本的手机 使用命令
+
+fastboot oem unlock
+
+这个时候手机会显示确认画面,确认解锁
+
+9. 输入twrp文件
+
+fastboot flash recovery twrp.img
+10. 刷入成功后，可以在bootloader状态下，用音量键来选择&quot;recovery mode&quot;来进入twrp
+11. 刷入 sd卡中的rom
+完成
+
+
+*如果遇到 提示vendor 与系统不符合的情况,请自行刷入 vendor包
+
+fastboot flashing vendor vendor.img
+vendor.img 在官方的image中可以找到
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 02 Sep 2016 08:32:24 +0800</pubDate>
+        <link>http://vno.onevcat.com/2016/09/nexusrom/</link>
+        <guid isPermaLink="true">http://vno.onevcat.com/2016/09/nexusrom/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Nexus 原生系统刷机教程</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/ms7mwMf7R0GX-lvCrfFptekdsTSMcKyJeFNtIyIGx-q_W3TnSs_E2zShxAaug75otw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section&quot;&gt;教程&lt;/h5&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 下载官方[刷机包](https://developers.google.com/android/nexus/images)
+2. 连接你的手机和电脑
+3. 打开开发者模式
+4. 打开USB调试
+5. 使用adb 命令启动手机的 fastboot模式
+
+adb reboot bootloader 
+
+6. 解锁你的手机
+
+fastboot flashing unlock
+
+对于比较旧的版本的手机 使用命令
+
+fastboot oem unlock
+
+这个时候手机会显示确认画面,确认解锁
+7. 打开电脑终端,并解压缩下载的image文件
+8. 直行解压缩文件夹中的
+
+flash-all.sh(windows 系统请直行flash-all.bat) 
+
+9. 等待刷入结束,system刷入相对速度会慢一些,请耐心等待
+10. 刷入结束后 系统自动重启
+11. 为了安全,请锁定手机
+
+fastboot flashing lock
+
+对于比较旧的版本的手机 使用命令
+
+
+fastboot oem lock
+
+
+新系统刷机完成
+
+
+[官方rom和刷机教程](https://developers.google.com/android/nexus/images)
+
+
+https://developers.google.com/android/nexus/images
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 02 Sep 2016 08:32:24 +0800</pubDate>
+        <link>http://vno.onevcat.com/2016/09/nexusimage/</link>
+        <guid isPermaLink="true">http://vno.onevcat.com/2016/09/nexusimage/</guid>
+        
+        
+      </item>
     
       <item>
         <title>整理常用的iOS第三方资源[转]</title>
