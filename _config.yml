@@ -13,6 +13,7 @@ permalink: /:year/:month/:title/
 markdown: kramdown
 kramdown:
     input: GFM
+    hard_wrap: false
 highlighter: rouge
 #markdown: redcarpet
 #redcarpet:
